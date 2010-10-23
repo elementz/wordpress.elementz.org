@@ -10,6 +10,8 @@ Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-backgr
 $black: #000;
 $white: #fff;
 $red: #ae1818;
+$gray: #555;
+
 $h1_size: 30pt;
 $button_red: #dc0a0a;
 
@@ -32,7 +34,10 @@ body {
 }
 
 input[type=submit] {
-  @include fancy-button;
+  @include fancy-button-structure;
+  @include fancy-gradient($button_red, darken($button_red, 20));
+  color: $white;
+  border: 1px solid darken($white, 60);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,7 +94,7 @@ div#site-description {
   @include column(18);
 }
 
-#container .hentry {
+#content {
   margin-bottom: 2em;
   padding: 0 1em;
   p {
@@ -101,33 +106,39 @@ div#site-description {
 #primary {
   @include column(6, true);
   padding: .5em 0;
-  input[type=text] {
-    font-size: 18px;
-    padding: 5px;
-    font-family: Helvetica, sans-serif;
-  }
   dl {
     font-size: 90%;
     dt {
       float: left;
       width: 40%;
-      padding: 5px 0 0 0;
-    }
+      padding: 5px 0 0 0; }
     dd {
-      padding: 5px 0 0 0;
-    }
+      padding: 5px 0 0 0; } } 
+  form.style5 {
+    input[type=text] {
+      font-size: 14px;
+      padding: 3px;
+      font-family: Helvetica, sans-serif;
+      width: 140px; } 
+    input[type=submit] {
+      padding: 0;
+      font-size: 12px;
+      width: 60px; } }
   }
-}
 
 .widget-container {
   padding-bottom: 2em;
   margin-bottom: 1em;
   background: transparent url(images/side_bar_horizontal_divider.jpg) 0% 100% no-repeat;
+
 }
 
 #comments {
-  padding: 1em 0;
-  @include linear-gradient(color-stops($red, $black));
+  padding: 1em;
+  margin: 1em 0;
+  @include linear-gradient(color-stops($gray, $black));
+  @include border-radius(5px);
+  border: 1px solid darken($gray, 10);
 }
 
 #footer {

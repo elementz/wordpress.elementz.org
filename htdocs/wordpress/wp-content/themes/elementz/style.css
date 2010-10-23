@@ -76,11 +76,12 @@ a img {
 }
 
 #access {
-  background: #ae1818 url(images/navigation_top_bar.jpg) no-repeat;
+  background: #ae1818 url(images/header_nav_bg.png) repeat-x;
   padding-top: 12px;
   display: block;
   float: left;
   margin: 0 auto;
+  width: 974px;
 }
 #access .menu-header {
   font-size: 18px;
@@ -91,8 +92,6 @@ div.menu {
   font-size: 18px;
   float: left;
   padding-bottom: 12px;
-  background: #ae1818 url(images/navigation_bottom_bar.jpg) bottom left no-repeat;
-  width: 974px;
 }
 
 #access .menu-header ul, div.menu ul {
@@ -167,6 +166,23 @@ div.menu {
   color: #fff;
 }
 
+#access .header-search {
+  float: right;
+}
+#access .header-search form {
+  padding: .2em 1em 0 1em;
+}
+#access .header-search form input[type=text] {
+  float: left;
+  font-size: 15px;
+  padding: 3px;
+  color: #4d4d4d;
+}
+#access .header-search form input[type=image] {
+  float: right;
+  padding: .3em;
+}
+
 body {
   background: black url(images/site_bg.jpg) 53% 0% no-repeat fixed;
   font-family: Helvetica, sans-serif;
@@ -194,12 +210,11 @@ input[type=submit] {
   line-height: 21.6px;
   padding: 5px 18px;
   border-width: 1px;
-  background-color: #444444;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #989898), color-stop(10%, #6a6a6a), color-stop(50%, #3c3c3c), color-stop(50%, #353535), color-stop(100%, #4e4e4e));
-  background-image: -moz-linear-gradient(top, #989898 0%, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e 100%);
-  background-image: linear-gradient(top, #989898 0%, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e 100%);
-  border-color: #1e1e1e;
-  text-shadow: #040404 0px 1px 1px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f74b4b), color-stop(10%, #dc0a0a), color-stop(50%, #890606), color-stop(50%, #7a0606), color-stop(100%, #ab0808));
+  background-image: -moz-linear-gradient(top, #f74b4b 0%, #dc0a0a 10%, #890606 50%, #7a0606 50%, #ab0808 100%);
+  background-image: linear-gradient(top, #f74b4b 0%, #dc0a0a 10%, #890606 50%, #7a0606 50%, #ab0808 100%);
+  color: white;
+  border: 1px solid #666666;
 }
 input[type=submit]::-moz-focus-inner {
   border: none;
@@ -223,42 +238,6 @@ input[type=submit]:active {
 input[type=submit].disabled:active, input[type=submit][disabled] {
   padding: 5px 18px;
   border-width: 1px;
-}
-input[type=submit], input[type=submit]:visited {
-  color: white;
-}
-input[type=submit].disabled:active, input[type=submit].disabled:hover, input[type=submit][disabled]:active, input[type=submit][disabled]:hover {
-  background-color: #444444;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #989898), color-stop(10%, #6a6a6a), color-stop(50%, #3c3c3c), color-stop(50%, #353535), color-stop(100%, #4e4e4e));
-  background-image: -moz-linear-gradient(top, #989898 0%, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e 100%);
-  background-image: linear-gradient(top, #989898 0%, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e 100%);
-  border-color: #1e1e1e;
-  text-shadow: #040404 0px 1px 1px;
-}
-input[type=submit].disabled:active, input[type=submit].disabled:active:visited, input[type=submit].disabled:hover, input[type=submit].disabled:hover:visited, input[type=submit][disabled]:active, input[type=submit][disabled]:active:visited, input[type=submit][disabled]:hover, input[type=submit][disabled]:hover:visited {
-  color: white;
-}
-input[type=submit]:hover, input[type=submit]:focus {
-  background-color: #3c3c3c;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #919191), color-stop(10%, #636363), color-stop(50%, #353535), color-stop(50%, #2d2d2d), color-stop(100%, #474747));
-  background-image: -moz-linear-gradient(top, #919191 0%, #636363 10%, #353535 50%, #2d2d2d 50%, #474747 100%);
-  background-image: linear-gradient(top, #919191 0%, #636363 10%, #353535 50%, #2d2d2d 50%, #474747 100%);
-  border-color: #161616;
-  text-shadow: black 0px 1px 1px;
-}
-input[type=submit]:hover, input[type=submit]:hover:visited, input[type=submit]:focus, input[type=submit]:focus:visited {
-  color: white;
-}
-input[type=submit]:active {
-  background-color: #353535;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #353535), color-stop(30%, #3a3a3a), color-stop(50%, #303030), color-stop(50%, #282828), color-stop(100%, #494949));
-  background-image: -moz-linear-gradient(top, #353535 0%, #3a3a3a 30%, #303030 50%, #282828 50%, #494949 100%);
-  background-image: linear-gradient(top, #353535 0%, #3a3a3a 30%, #303030 50%, #282828 50%, #494949 100%);
-  border-color: #0e0e0e;
-  text-shadow: black 0px -1px -1px;
-}
-input[type=submit]:active, input[type=submit]:active:visited {
-  color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -330,11 +309,11 @@ div#site-description {
   overflow-x: hidden;
 }
 
-#container .hentry {
+#content {
   margin-bottom: 2em;
   padding: 0 1em;
 }
-#container .hentry p {
+#content p {
   line-height: 1.5em;
 }
 
@@ -349,11 +328,6 @@ div#site-description {
 * html #primary {
   overflow-x: hidden;
 }
-#primary input[type=text] {
-  font-size: 18px;
-  padding: 5px;
-  font-family: Helvetica, sans-serif;
-}
 #primary dl {
   font-size: 90%;
 }
@@ -365,6 +339,17 @@ div#site-description {
 #primary dl dd {
   padding: 5px 0 0 0;
 }
+#primary form.style5 input[type=text] {
+  font-size: 14px;
+  padding: 3px;
+  font-family: Helvetica, sans-serif;
+  width: 140px;
+}
+#primary form.style5 input[type=submit] {
+  padding: 0;
+  font-size: 12px;
+  width: 60px;
+}
 
 .widget-container {
   padding-bottom: 2em;
@@ -373,10 +358,18 @@ div#site-description {
 }
 
 #comments {
-  padding: 1em 0;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ae1818), color-stop(100%, #000000));
-  background-image: -moz-linear-gradient(top, #ae1818 0%, #000000 100%);
-  background-image: linear-gradient(top, #ae1818 0%, #000000 100%);
+  padding: 1em;
+  margin: 1em 0;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #555555), color-stop(100%, #000000));
+  background-image: -moz-linear-gradient(top, #555555 0%, #000000 100%);
+  background-image: linear-gradient(top, #555555 0%, #000000 100%);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #3b3b3b;
 }
 
 #footer {

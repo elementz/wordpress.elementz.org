@@ -1,11 +1,12 @@
 $font-size: 18px;
 
 #access {
-  background: $red url(images/navigation_top_bar.jpg) no-repeat;
+  background: $red url(images/header_nav_bg.png) repeat-x;
   padding-top: 12px;
   display: block;
   float: left;
   margin: 0 auto;
+  width: 974px;
   .menu-header {
     font-size: $font-size;
     width: 100%; } }
@@ -13,9 +14,7 @@ $font-size: 18px;
 div.menu {
   font-size: $font-size;
   float: left;
-  padding-bottom: 12px;
-  background: $red url(images/navigation_bottom_bar.jpg) bottom left no-repeat;
-  width: 974px; }
+  padding-bottom: 12px; }
 
 #access .menu-header ul, div.menu ul {
   list-style: none;
@@ -27,9 +26,7 @@ div.menu {
   background: transparent url(images/navigation_star.png) center right no-repeat;
   position: relative; 
   &:last-child {
-    background: none;
-  }
-}
+    background: none; } }
 
 #access {
   a {
@@ -81,3 +78,17 @@ div.menu {
 * html #access ul li {
   &.current_page_item a, &.current-menu-ancestor a, &.current-menu-item a, &.current-menu-parent a, a:hover {
     color: #fff; } }
+
+#access .header-search {
+  float: right; 
+  form {
+    padding: .2em 1em 0 1em;
+    input[type=text] {
+      float: left;
+      font-size: 15px;
+      padding: 3px;
+      color: lighten($black, 30); }
+    input[type=image] {
+      float: right;
+      padding: .3em;
+    } } }
