@@ -126,7 +126,7 @@
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
-				<?php twentyten_posted_on(); ?>
+				<?php echo get_the_date(); ?>
 			</div><!-- .entry-meta -->
 
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
@@ -159,6 +159,11 @@
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 			</div><!-- .entry-utility -->
+
+			<div class="entry-bio">
+                <?php echo get_avatar(get_the_author_meta('user_email')); ?>
+				<em><?php twentyten_posted_on(); ?></em>. <?php echo get_the_author_meta('description'); ?>
+			</div><!-- .entry-bio -->
 		</div><!-- #post-## -->
 
 		<?php comments_template( '', true ); ?>

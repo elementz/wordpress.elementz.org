@@ -337,13 +337,36 @@ body.page .edit-link {
 	line-height: 18px;
 }
 .entry-meta a,
-.entry-utility a {
+.entry-utility a,
+.entry-bio a {
 	color: #888;
 }
 .entry-meta a:hover,
-.entry-utility a:hover {
+.entry-utility a:hover,
+.entry-bio a:hover {
 	color: #ff4b33;
 }
+
+.entry-bio {
+    border: 1px solid #676767;
+    margin-top: 15px;
+    padding:15px;
+    em {
+        font-style: italic;
+    }
+    img {
+        vertical-align: top;
+        padding: 1px;
+        margin-right: 2px;
+        border: 1px solid #fff;
+    }
+}
+
+.post {
+    background-color: #131313;
+    padding: 10px;
+}
+
 #content .video-player {
 	padding: 0;
 }

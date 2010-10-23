@@ -279,7 +279,7 @@ body {
 
 input[type=submit] {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/wp-content/themes/elementz/images/button_bg.png?1287854931') repeat-x bottom left;
+  background: url('/wp-content/themes/elementz/images/button_bg.png?1287867459') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -681,13 +681,35 @@ body.page .edit-link {
 }
 
 .entry-meta a,
-.entry-utility a {
+.entry-utility a,
+.entry-bio a {
   color: #888;
 }
 
 .entry-meta a:hover,
-.entry-utility a:hover {
+.entry-utility a:hover,
+.entry-bio a:hover {
   color: #ff4b33;
+}
+
+.entry-bio {
+  border: 1px solid #676767;
+  margin-top: 15px;
+  padding: 15px;
+}
+.entry-bio em {
+  font-style: italic;
+}
+.entry-bio img {
+  vertical-align: top;
+  padding: 1px;
+  margin-right: 2px;
+  border: 1px solid #fff;
+}
+
+.post {
+  background-color: #131313;
+  padding: 10px;
 }
 
 #content .video-player {
