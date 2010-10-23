@@ -216,7 +216,7 @@ div#site-description {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 630px;
+  width: 710px;
 }
 * html #container {
   overflow-x: hidden;
@@ -234,7 +234,7 @@ div#site-description {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 310px;
+  width: 230px;
 }
 * html #primary {
   overflow-x: hidden;

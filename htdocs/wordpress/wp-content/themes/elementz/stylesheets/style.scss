@@ -7,13 +7,12 @@ Version: 1.0
 Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style
 */
 
-@import 'blueprint/grid';
-
 $black: #000;
 $white: #fff;
 $red: #f00;
 $h1_size: 32pt;
 
+@import 'blueprint/grid';
 @import 'compass/reset';
 @import 'compass/utilities';
 @import 'compass/css3/gradient';
@@ -80,7 +79,7 @@ div#site-description {
 
 /* Content */
 #container {
-  @include column(16);
+  @include column(18);
 }
 
 #container .hentry {
@@ -92,7 +91,7 @@ div#site-description {
 
 /* Sidebar */
 #primary {
-  @include column(8, true);
+  @include column(6, true);
 }
 
 #comments {
