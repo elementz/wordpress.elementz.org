@@ -354,6 +354,23 @@ div#site-description {
   padding: 5px;
   font-family: Helvetica, sans-serif;
 }
+#primary dl {
+  font-size: 90%;
+}
+#primary dl dt {
+  float: left;
+  width: 40%;
+  padding: 5px 0 0 0;
+}
+#primary dl dd {
+  padding: 5px 0 0 0;
+}
+
+.widget-container {
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+  background: transparent url(images/side_bar_horizontal_divider.jpg) 0% 100% no-repeat;
+}
 
 #comments {
   padding: 1em 0;
