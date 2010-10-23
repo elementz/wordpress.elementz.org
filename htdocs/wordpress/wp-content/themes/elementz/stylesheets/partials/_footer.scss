@@ -1,0 +1,13 @@
+#footer {
+  @include linear-gradient(color-stops($black, $red));
+  @include column(24, true);
+  width: 973px; /* hack until the bg is fixed */
+  height: 15em;
+}
+
+#footer .logo {
+  height: 163px;
+  width: 175px;
+  background: transparent url(images/footer_logo.png) 120% 50% no-repeat;
+  float: left;
+}

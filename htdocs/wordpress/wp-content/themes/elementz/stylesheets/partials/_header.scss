@@ -1,0 +1,11 @@
+#header {
+  @include column(24, true);
+}
+
+#site-title {
+  display: none;
+}
+
+div#site-description {
+  display: none;
+}
