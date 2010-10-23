@@ -670,8 +670,9 @@ body.page .edit-link {
 }
 
 #entry-author-info {
-  background: #f2f7fc;
-  border-top: 4px solid #000;
+  background: #131313;
+  /*border-top: 4px solid #000;*/
+  border-top: 1px solid #676767;
   clear: both;
   font-size: 14px;
   line-height: 20px;
@@ -686,7 +687,7 @@ body.page .edit-link {
   float: left;
   height: 60px;
   margin: 0 -104px 0 0;
-  padding: 11px;
+  padding: 1px;
 }
 
 #entry-author-info #author-description {
@@ -708,33 +709,16 @@ body.page .edit-link {
 }
 
 .entry-meta a,
-.entry-utility a,
-.entry-bio a {
+.entry-utility a {
   color: #888;
 }
 
 .entry-meta a:hover,
-.entry-utility a:hover,
-.entry-bio a:hover {
+.entry-utility a:hover {
   color: #ff4b33;
 }
 
-.entry-bio {
-  border: 1px solid #676767;
-  margin-top: 15px;
-  padding: 15px;
-}
-.entry-bio em {
-  font-style: italic;
-}
-.entry-bio img {
-  vertical-align: top;
-  padding: 1px;
-  margin-right: 2px;
-  border: 1px solid #fff;
-}
-
-.post {
+.hentry {
   background-color: #131313;
   padding: 10px;
 }
