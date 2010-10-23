@@ -1,0 +1,137 @@
+/*
+Theme Name: Elementz - Give Camp
+Theme URI: http://swohiogivecamp.org/
+Description: The theme created by the Give Camp Team.
+Author: the Give Camp team
+Version: 1.0
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style
+*/
+
+$black: #000;
+$white: #fff;
+$red: #ae1818;
+$h1_size: 30pt;
+
+$blueprint_grid_columns: 24;
+$blueprint_grid_width: 31px;
+
+@import 'blueprint/grid';
+@import 'compass/reset';
+@import 'compass/utilities';
+@import 'compass/css3/gradient';
+@import 'fancy-buttons';
+
+@import 'partials/fonts';
+@import 'partials/menu';
+
+body {
+  background: #000 url(images/site_bg.jpg) 53% 0% no-repeat fixed;
+  font-family: Helvetica, sans-serif;
+  color: darken($white, 15);
+}
+
+input[type=submit] {
+  @include fancy-button;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'UmbrageRegular';
+  color: $red;
+}
+
+h1 {
+  font-size: $h1_size;
+  margin: .5em 0;
+}
+
+h2 {
+  font-size: $h1_size - 5pt;
+  margin: .5em 0;
+}
+
+h3 {
+  font-size: $h1_size - 10pt;
+  margin: .5em 0;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 1em;
+  li {
+    padding: .25em 0;
+  }
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+#wrapper {
+  @include container;
+}
+
+/* Header */
+#header {
+  @include column(24, true);
+}
+
+#site-title {
+  display: none;
+}
+
+div#site-description {
+  display: none;
+}
+
+/* Content */
+#container {
+  @include column(18);
+}
+
+#container .hentry {
+  margin-bottom: 2em;
+  padding: 0 1em;
+  p {
+    line-height: 1.5em;
+  }
+}
+
+/* Sidebar */
+#primary {
+  @include column(6, true);
+  padding: .5em 0;
+  input[type=text] {
+    font-size: 18px;
+    padding: 5px;
+    font-family: Helvetica, sans-serif;
+  }
+}
+
+#comments {
+  padding: 1em 0;
+  @include linear-gradient(color-stops($red, $black));
+}
+
+#footer {
+  @include linear-gradient(color-stops($black, $red));
+  @include column(24, true);
+  width: 973px; /* hack until the bg is fixed */
+  height: 15em;
+}
+
+#footer .logo {
+  height: 163px;
+  width: 175px;
+  background: transparent url(images/footer_logo.png) 120% 50% no-repeat;
+  float: left;
+}
+
+.staffer {
+  margin: 1em 0;
+  clear: both;
+  img {
+    width: 150px;
+    margin: 0 1em 1em 0;
+    float: left;
+  }
+}
