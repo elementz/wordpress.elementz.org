@@ -112,7 +112,7 @@ div.menu {
   padding-bottom: 12px;
 }
 
-#access .menu-header ul, div.menu ul {
+#access .menu-header ul, #access div.menu ul {
   list-style: none;
   margin: 0;
 }
@@ -256,9 +256,6 @@ div.menu {
   float: left;
   margin-right: 0;
   width: 974px;
-  width: 973px;
-  /* hack until the bg is fixed */
-  height: 15em;
 }
 * html #footer {
   overflow-x: hidden;
@@ -269,6 +266,36 @@ div.menu {
   width: 175px;
   background: transparent url(images/footer_logo.png) 120% 50% no-repeat;
   float: left;
+  margin-right: 1em;
+}
+
+#footer p {
+  line-height: 1.25em;
+  font-size: 90%;
+}
+#footer div.colophon {
+  clear: both;
+}
+#footer div.map {
+  float: left;
+  margin: 0 1em;
+}
+#footer div.menu ul {
+  list-style: normal;
+  font-size: 10px;
+}
+#footer div.menu ul li {
+  float: none;
+  padding-right: 0;
+  background: none;
+  margin: 0 1em;
+}
+#footer div.menu ul li a {
+  display: block;
+  padding: .25em 0;
+}
+#footer div#site-generator {
+  font-size: 70%;
 }
 
 body {
@@ -845,10 +872,6 @@ body.page .edit-link {
   /* single attachment images should be centered */
   display: block;
   margin: 0 auto;
-}
-
-#disqus_thread {
-  color: #ccc !important;
 }
 
 .staffer {
