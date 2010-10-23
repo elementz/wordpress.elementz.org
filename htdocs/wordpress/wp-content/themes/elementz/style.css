@@ -376,6 +376,7 @@ ol li {
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
+  background-color: #000;
 }
 
 #container {
