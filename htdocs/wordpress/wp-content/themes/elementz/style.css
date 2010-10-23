@@ -67,15 +67,115 @@ a img {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'UmbrageRegular';
+  src: url("/wordpress/wp-content/themes/elementz/fonts/umbrage/umbrage2-webfont.eot");
+  src: local("☺"), url("/wordpress/wp-content/themes/elementz/fonts/umbrage/umbrage2-webfont.woff") format("woff"), url("/wordpress/wp-content/themes/elementz/fonts/umbrage/umbrage2-webfont.ttf") format("truetype"), url("/wordpress/wp-content/themes/elementz/fonts/umbrage/umbrage2-webfont.svg#webfontVHCKwiEL") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#access {
+  background: #ae1818 url(images/navigation_top_bar.jpg) no-repeat;
+  padding-top: 12px;
+  display: block;
+  float: left;
+  margin: 0 auto;
+}
+#access .menu-header {
+  font-size: 18px;
+  width: 100%;
+}
+
+div.menu {
+  font-size: 18px;
+  float: left;
+  padding-bottom: 12px;
+  background: #ae1818 url(images/navigation_bottom_bar.jpg) bottom left no-repeat;
+  width: 974px;
+}
+
+#access .menu-header ul, div.menu ul {
+  list-style: none;
+  margin: 0;
+}
+
+#access .menu-header li, div.menu li {
+  float: left;
+  padding-right: 18px;
+  background: transparent url(images/navigation_star.png) center right no-repeat;
+  position: relative;
+}
+#access .menu-header li:last-child, div.menu li:last-child {
+  background: none;
+}
+
+#access a {
+  color: #fff;
+  display: block;
+  line-height: 38px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  padding: 0 1em;
+  text-decoration: none;
+}
+#access ul ul {
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  float: left;
+  width: 180px;
+  z-index: 99999;
+}
+#access ul ul li {
+  background: none;
+  min-width: 180px;
+}
+#access ul ul ul {
+  left: 100%;
+  top: 0;
+}
+#access ul ul a {
+  font-size: 15px;
+  background: #540c0c;
+  line-height: 1em;
+  padding: 10px;
+  width: 200px;
+  text-transform: none;
+  height: auto;
+}
+#access li:hover > a {
+  background: #540c0c;
+  color: #fff;
+}
+#access ul ul :hover > a {
+  background: #280505;
+  color: #fff;
+}
+#access ul li:hover > ul {
+  display: block;
+}
+#access ul li.current_page_item > a, #access ul li.current-menu-ancestor > a, #access ul li.current-menu-item > a, #access ul li.current-menu-parent > a {
+  color: #fff;
+}
+
+* html #access ul li.current_page_item a, * html #access ul li.current-menu-ancestor a, * html #access ul li.current-menu-item a, * html #access ul li.current-menu-parent a, * html #access ul li a:hover {
+  color: #fff;
+}
+
 body {
-  background-color: #fff;
-  color: red;
+  background: black url(images/site_bg.jpg) 53% 0% no-repeat fixed;
   font-family: Helvetica, sans-serif;
+  color: #d9d9d9;
 }
 
 input[type=submit] {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/wp-content/themes/elementz/images/button_bg.png?1287807045') repeat-x bottom left;
+  background: url('/wp-content/themes/elementz/images/button_bg.png?1287845312') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -162,30 +262,39 @@ input[type=submit]:active, input[type=submit]:active:visited {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'GoodDogRegular';
+  font-family: 'UmbrageRegular';
+  color: #ae1818;
 }
 
 h1 {
-  font-size: 32pt;
+  font-size: 30pt;
   margin: .5em 0;
 }
 
 h2 {
-  font-size: 27pt;
+  font-size: 25pt;
   margin: .5em 0;
 }
 
 h3 {
-  font-size: 22pt;
+  font-size: 20pt;
   margin: .5em 0;
 }
 
 ol {
   list-style: decimal;
+  margin-left: 1em;
+}
+ol li {
+  padding: .25em 0;
+}
+
+.screen-reader-text {
+  display: none;
 }
 
 #wrapper {
-  width: 950px;
+  width: 974px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
@@ -196,19 +305,18 @@ ol {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 950px;
+  width: 974px;
 }
 * html #header {
   overflow-x: hidden;
 }
 
-h1#site-title {
-  float: left;
+#site-title {
+  display: none;
 }
 
 div#site-description {
-  float: right;
-  padding: 2.5em 0 0 0;
+  display: none;
 }
 
 /* Content */
@@ -216,7 +324,7 @@ div#site-description {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 710px;
+  width: 728px;
 }
 * html #container {
   overflow-x: hidden;
@@ -224,6 +332,7 @@ div#site-description {
 
 #container .hentry {
   margin-bottom: 2em;
+  padding: 0 1em;
 }
 #container .hentry p {
   line-height: 1.5em;
@@ -234,109 +343,46 @@ div#site-description {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 230px;
+  width: 236px;
+  padding: .5em 0;
 }
 * html #primary {
   overflow-x: hidden;
 }
+#primary input[type=text] {
+  font-size: 18px;
+  padding: 5px;
+  font-family: Helvetica, sans-serif;
+}
 
 #comments {
   padding: 1em 0;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #666666), color-stop(100%, #000000));
-  background-image: -moz-linear-gradient(top, #666666 0%, #000000 100%);
-  background-image: linear-gradient(top, #666666 0%, #000000 100%);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ae1818), color-stop(100%, #000000));
+  background-image: -moz-linear-gradient(top, #ae1818 0%, #000000 100%);
+  background-image: linear-gradient(top, #ae1818 0%, #000000 100%);
 }
 
 #footer {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #000000), color-stop(100%, #ae1818));
+  background-image: -moz-linear-gradient(top, #000000 0%, #ae1818 100%);
+  background-image: linear-gradient(top, #000000 0%, #ae1818 100%);
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 950px;
-  margin: 1em 0;
+  margin-right: 0;
+  width: 974px;
+  width: 973px;
+  /* hack until the bg is fixed */
+  height: 15em;
 }
 * html #footer {
   overflow-x: hidden;
 }
 
-#access {
-  background: #000;
-  display: block;
+#footer .logo {
+  height: 163px;
+  width: 175px;
+  background: transparent url(images/footer_logo.png) 120% 50% no-repeat;
   float: left;
-  margin: 0 auto;
-  width: 940px;
-}
-#access .menu-header {
-  font-size: 13px;
-  margin-left: 12px;
-  width: 928px;
-}
-
-div.menu {
-  font-size: 13px;
-  margin-left: 12px;
-  width: 928px;
-}
-
-#access .menu-header ul, div.menu ul {
-  list-style: none;
-  margin: 0;
-}
-
-#access .menu-header li, div.menu li {
-  float: left;
-  position: relative;
-}
-
-#access a {
-  color: #aaa;
-  display: block;
-  line-height: 38px;
-  padding: 0 10px;
-  text-decoration: none;
-}
-#access ul ul {
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-  display: none;
-  position: absolute;
-  top: 38px;
-  left: 0;
-  float: left;
-  width: 180px;
-  z-index: 99999;
-}
-#access ul ul li {
-  min-width: 180px;
-}
-#access ul ul ul {
-  left: 100%;
-  top: 0;
-}
-#access ul ul a {
-  background: #333;
-  line-height: 1em;
-  padding: 10px;
-  width: 160px;
-  height: auto;
-}
-#access li:hover > a {
-  background: #333;
-  color: #fff;
-}
-#access ul ul :hover > a {
-  background: #333;
-  color: #fff;
-}
-#access ul li:hover > ul {
-  display: block;
-}
-#access ul li.current_page_item > a, #access ul li.current-menu-ancestor > a, #access ul li.current-menu-item > a, #access ul li.current-menu-parent > a {
-  color: #fff;
-}
-
-* html #access ul li.current_page_item a, * html #access ul li.current-menu-ancestor a, * html #access ul li.current-menu-item a, * html #access ul li.current-menu-parent a, * html #access ul li a:hover {
-  color: #fff;
 }
 
 .staffer {

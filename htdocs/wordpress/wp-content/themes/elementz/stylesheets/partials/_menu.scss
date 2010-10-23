@@ -1,18 +1,21 @@
+$font-size: 18px;
+
 #access {
-  background: #000;
+  background: $red url(images/navigation_top_bar.jpg) no-repeat;
+  padding-top: 12px;
   display: block;
   float: left;
   margin: 0 auto;
-  width: 940px;
   .menu-header {
-    font-size: 13px;
-    margin-left: 12px;
-    width: 928px; } }
+    font-size: $font-size;
+    width: 100%; } }
 
 div.menu {
-  font-size: 13px;
-  margin-left: 12px;
-  width: 928px; }
+  font-size: $font-size;
+  float: left;
+  padding-bottom: 12px;
+  background: $red url(images/navigation_bottom_bar.jpg) bottom left no-repeat;
+  width: 974px; }
 
 #access .menu-header ul, div.menu ul {
   list-style: none;
@@ -20,14 +23,22 @@ div.menu {
 
 #access .menu-header li, div.menu li {
   float: left;
-  position: relative; }
+  padding-right: 18px;
+  background: transparent url(images/navigation_star.png) center right no-repeat;
+  position: relative; 
+  &:last-child {
+    background: none;
+  }
+}
 
 #access {
   a {
-    color: #aaa;
+    color: #fff;
     display: block;
     line-height: 38px;
     padding: 0 10px;
+    text-transform: uppercase;
+    padding: 0 1em;
     text-decoration: none; }
   ul ul {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
@@ -41,22 +52,25 @@ div.menu {
     width: 180px;
     z-index: 99999;
     li {
+      background: none;
       min-width: 180px; }
     ul {
       left: 100%;
       top: 0; }
     a {
-      background: #333;
+      font-size: $font-size - 3px;
+      background: darken($red, 20);
       line-height: 1em;
       padding: 10px;
-      width: 160px;
+      width: 200px;
+      text-transform: none;
       height: auto; } }
   li:hover > a {
-    background: #333;
+    background: darken($red, 20);
     color: #fff; }
   ul {
     ul :hover > a {
-      background: #333;
+      background: darken($red, 30);
       color: #fff; }
     li {
       &:hover > ul {

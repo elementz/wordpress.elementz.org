@@ -13,6 +13,7 @@
 	</div><!-- #main -->
 
 	<div id="footer" role="contentinfo">
+    <div class="logo"></div>
 		<div id="colophon">
 
 <?php
