@@ -1,6 +1,8 @@
 #primary {
   @include column(6, true);
   padding: .5em 0;
+  a {
+    font-size: 90%; }
   ul.xoxo li {
     padding: .3em .25em 2em .25em; 
     li {
@@ -26,4 +28,4 @@
 
 .widget-container {
   padding-bottom: 2em;
-  background: transparent url(images/side_bar_horizontal_divider.jpg) 0% 100% no-repeat; }
+  background: transparent url(images/side_bar_horizontal_divider.jpg) -90% 100% no-repeat; }
