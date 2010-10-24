@@ -439,3 +439,20 @@ function twentyten_posted_in() {
 	);
 }
 endif;
+
+function getUsersByRole( $role ) {
+	if ( class_exists( 'WP_User_Search' ) ) {
+		$wp_user_search = new WP_User_Search( '', '', $role );
+		$userIDs = $wp_user_search->get_results();
+	} else {
+		global $wpdb;
+		$userIDs = $wpdb->get_col('
+			SELECT ID
+			FROM '.$wpdb->users.' INNER JOIN '.$wpdb->usermeta.'
+			ON '.$wpdb->users.'.ID = '.$wpdb->usermeta.'.user_id
+			WHERE '.$wpdb->usermeta.'.meta_key = \''.$wpdb->prefix.'capabilities\'
+			AND '.$wpdb->usermeta.'.meta_value LIKE \'%"'.$role.'"%\'
+		');
+	}
+	return $userIDs;
+}
