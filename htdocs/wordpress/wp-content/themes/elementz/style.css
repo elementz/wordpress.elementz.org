@@ -336,7 +336,7 @@ body {
 
 input[type=submit] {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/wp-content/themes/elementz/images/button_bg.png?1287854931') repeat-x bottom left;
+  background: url('/wp-content/themes/elementz/images/button_bg.png?1287867459') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -468,7 +468,6 @@ ol li {
 }
 
 .nav-previous, .nav-next {
-  float: left;
   width: 50%;
 }
 
@@ -562,7 +561,7 @@ ol li {
 }
 
 .page-title span {
-  color: #333;
+  color: #c2c2c2;
   font-size: 16px;
   font-style: italic;
   font-weight: normal;
