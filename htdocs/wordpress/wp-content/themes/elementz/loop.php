@@ -19,6 +19,19 @@
  */
 ?>
 
+<?php /* Displays the latest blog post from Showcase category */ ?>
+<?php if ( is_front_page() ) : ?>
+    <?php $recent = new WP_Query("cat=17&showposts=1"); $showcase = get_post($recent->post->ID); ?>
+    <?php $showcaseId = $showcase->ID; // save post ID to skip later ?>
+    <div id="post-<?php echo $showcase->ID; ?>" <?php echo 'class="post-list ' . join(' ', get_post_class()) . '"'; ?>>
+        <h1 class="entry-title"><?php echo $showcase->post_title; ?></h1>
+
+        <div class="entry-content">
+            <?php echo $showcase->post_content; ?>
+        </div><!-- .entry-content -->
+    </div>
+<?php endif; ?>
+
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 	<div id="nav-above" class="navigation">
@@ -36,18 +49,6 @@
 			<?php get_search_form(); ?>
 		</div><!-- .entry-content -->
 	</div><!-- #post-0 -->
-<?php endif; ?>
-
-<?php /* Displays the latest blog post from Showcase category */ ?>
-<?php if ( is_front_page() ) : ?>
-    <?php $recent = new WP_Query("cat=17&showposts=1"); $showcase = get_post($recent->post->ID); ?>
-    <div id="post-<?php echo $showcase->ID; ?>" <?php echo 'class="post-list ' . join(' ', get_post_class()) . '"'; ?>>
-        <h1 class="entry-title"><?php echo $showcase->post_title; ?></h1>
-
-        <div class="entry-content">
-            <?php echo $showcase->post_content; ?>
-        </div><!-- .entry-content -->
-    </div>
 <?php endif; ?>
 
 <?php
@@ -133,7 +134,7 @@
 
 <?php /* How to display all other posts. */ ?>
 
-	<?php else : ?>
+	<?php elseif (get_the_ID() !== $showcaseId): // don't display Showcase post - displayed above ?>
 		<div id="post-<?php the_ID(); ?>" <?php echo 'class="post-list ' . join(' ', get_post_class()) . '"'; ?>>
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
