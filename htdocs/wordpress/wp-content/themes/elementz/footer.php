@@ -15,7 +15,7 @@
 	<div id="footer" role="contentinfo">
     <div class="logo"></div>
 		<div id="colophon">
-			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+			<?php wp_nav_menu( array( 'container_class' => 'menu-footer', 'theme_location' => 'primary' ) ); ?>
       <div class="map">
         <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1599+Central+Pkwy,+Cincinnati,+OH+45214+(elementz)&sll=39.113312,-84.521148&sspn=0.008008,0.014752&ie=UTF8&hq=&hnear=1599+Central+Pkwy,+Cincinnati,+Hamilton,+Ohio+45214&z=17&iwloc=r0" alt="Get Directions"><img src="<?php bloginfo('template_directory'); ?>/images/google_map.png" /></a>
       </div>

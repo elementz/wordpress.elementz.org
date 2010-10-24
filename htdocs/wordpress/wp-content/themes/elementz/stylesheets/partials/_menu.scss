@@ -7,6 +7,7 @@ $font-size: 18px;
   float: left;
   margin: 0 auto;
   width: 974px;
+  height: 50px;
   .menu-header {
     font-size: $font-size;
     width: 100%; } }
@@ -16,7 +17,7 @@ div.menu {
   float: left;
   padding-bottom: 12px; }
 
-#access .menu-header ul, #access div.menu ul {
+#access .menu-header ul, div.menu ul {
   list-style: none;
   margin: 0; }
 
@@ -25,6 +26,8 @@ div.menu {
   padding-right: 18px;
   background: transparent url(images/navigation_star.png) center right no-repeat;
   position: relative; 
+  li {
+    background: none; }
   &:last-child {
     background: none; } }
 

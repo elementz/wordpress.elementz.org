@@ -100,6 +100,7 @@ div#site-description {
   float: left;
   margin: 0 auto;
   width: 974px;
+  height: 50px;
 }
 #access .menu-header {
   font-size: 18px;
@@ -112,7 +113,7 @@ div.menu {
   padding-bottom: 12px;
 }
 
-#access .menu-header ul, #access div.menu ul {
+#access .menu-header ul, div.menu ul {
   list-style: none;
   margin: 0;
 }
@@ -122,6 +123,9 @@ div.menu {
   padding-right: 18px;
   background: transparent url(images/navigation_star.png) center right no-repeat;
   position: relative;
+}
+#access .menu-header li li, div.menu li li {
+  background: none;
 }
 #access .menu-header li:last-child, div.menu li:last-child {
   background: none;
@@ -280,17 +284,20 @@ div.menu {
   float: left;
   margin: 0 1em;
 }
-#footer div.menu ul {
+#footer div.menu-footer {
+  float: left;
+}
+#footer div.menu-footer ul {
   list-style: normal;
   font-size: 10px;
 }
-#footer div.menu ul li {
+#footer div.menu-footer ul li {
   float: none;
   padding-right: 0;
   background: none;
   margin: 0 1em;
 }
-#footer div.menu ul li a {
+#footer div.menu-footer ul li a {
   display: block;
   padding: .25em 0;
 }
@@ -306,7 +313,7 @@ body {
 
 input[type=submit] {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/wp-content/themes/elementz/images/button_bg.png?1287867459') repeat-x bottom left;
+  background: url('/wp-content/themes/elementz/images/button_bg.png?1287854931') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
