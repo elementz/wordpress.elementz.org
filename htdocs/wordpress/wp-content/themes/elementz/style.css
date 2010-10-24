@@ -273,6 +273,9 @@ div.menu {
   margin-right: 1em;
 }
 
+#footer {
+  padding: 1em 0;
+}
 #footer p {
   line-height: 1.25em;
   font-size: 90%;
@@ -283,6 +286,10 @@ div.menu {
 #footer div.map {
   float: left;
   margin: 0 1em;
+}
+#footer div.copyright {
+  font-size: 80%;
+  margin-top: 1em;
 }
 #footer div.menu-footer {
   float: left;

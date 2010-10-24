@@ -28,6 +28,10 @@
         <p>1599 Central Parkway</p>
         <p>Cincinnati, OH 45214</p>
       </div>
+      <div class="copyright">
+        <p><a href="/wordpress/elementz-privacy-notice/">Privacy Notice</a></p>
+        <p>Content &copy; 2010 Elementz</p>
+      </div>
 <?php
 	/* A sidebar in the footer? Yep. You can can customize
 	 * your footer with four columns of widgets.

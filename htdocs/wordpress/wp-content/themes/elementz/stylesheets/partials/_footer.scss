@@ -12,17 +12,18 @@
 }
 
 #footer {
+  padding: 1em 0;
   p {
     line-height: 1.25em;
-    font-size: 90%;
-  }
+    font-size: 90%; }
   div.colophon {
-    clear: both;
-  }
+    clear: both; }
   div.map {
     float: left;
-    margin: 0 1em;
-  }
+    margin: 0 1em; }
+  div.copyright {
+    font-size: 80%;
+    margin-top: 1em; }
   div.menu-footer {
     float: left;
     ul {
