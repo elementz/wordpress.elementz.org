@@ -21,15 +21,7 @@ get_header(); ?>
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php if ( is_front_page() ) { ?>
-                        <?php $recent = new WP_Query("cat=17&showposts=1"); $showcase = get_post($recent->post->ID); ?>
-                        <div id="post-<?php echo $showcase->ID; ?>" <?php post_class(); ?>>
-                            <h1 class="entry-title"><?php echo $showcase->post_title; ?></h1>
-
-                            <div class="entry-content">
-                                <?php echo $showcase->post_content; ?>
-                            </div><!-- .entry-content -->
-                        </div>
-
+						<!--<h1 class="entry-title"><?php the_title(); ?></h1>-->
 					<?php } else { ?>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 					<?php } ?>
