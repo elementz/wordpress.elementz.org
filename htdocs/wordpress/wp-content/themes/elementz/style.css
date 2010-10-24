@@ -136,7 +136,7 @@ div.menu {
 
 #access .menu-header li, div.menu li {
   float: left;
-  padding-right: 18px;
+  padding-right: 15px;
   background: transparent url(images/navigation_star.png) center right no-repeat;
   position: relative;
 }
@@ -151,9 +151,8 @@ div.menu {
   color: #fff;
   display: block;
   line-height: 38px;
-  padding: 0 10px;
   text-transform: uppercase;
-  padding: 0 1em;
+  padding: 0 .5em;
   text-decoration: none;
 }
 #access ul ul {
@@ -180,8 +179,7 @@ div.menu {
   font-size: 15px;
   background: #540c0c;
   line-height: 1em;
-  padding: 10px;
-  width: 200px;
+  padding: 10px 5px;
   text-transform: none;
   height: auto;
 }
