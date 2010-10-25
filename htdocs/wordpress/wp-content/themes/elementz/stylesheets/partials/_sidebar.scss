@@ -1,0 +1,31 @@
+#primary {
+  @include column(6, true);
+  padding: .5em 0;
+  a {
+    font-size: 90%; }
+  ul.xoxo li {
+    padding: .3em .25em 2em .25em; 
+    li {
+      padding: .3em 0; } }
+  dl {
+    font-size: 90%;
+    dt {
+      float: left;
+      width: 40%;
+      padding: 5px 0 0 0; }
+    dd {
+      padding: 5px 0 0 0; } } 
+  form.style5 {
+    input[type=text] {
+      font-size: 14px;
+      padding: 3px;
+      font-family: Helvetica, sans-serif;
+      width: 120px; } 
+    input[type=submit] {
+      padding: .2em 0;
+      font-size: 14px;
+      width: 70px; } } }
+
+.widget-container {
+  padding-bottom: 2em;
+  background: transparent url(images/side_bar_horizontal_divider.jpg) -90% 100% no-repeat; }

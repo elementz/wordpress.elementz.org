@@ -1,0 +1,41 @@
+#footer {
+  @include linear-gradient(color-stops($black, $red));
+  @include column(24, true);
+}
+
+#footer .logo {
+  height: 163px;
+  width: 175px;
+  background: transparent url(images/footer_logo.png) 120% 50% no-repeat;
+  float: left;
+  margin-right: 1em;
+}
+
+#footer {
+  padding: 1em 0;
+  p {
+    line-height: 1.25em;
+    font-size: 90%; }
+  div.colophon {
+    clear: both; }
+  div.map {
+    float: left;
+    margin: 0 1em; }
+  div.copyright {
+    font-size: 80%;
+    margin-top: 1em; }
+  div.menu-footer {
+    float: left;
+    ul {
+      list-style: normal;
+      font-size: 10px;
+      li {
+        float: none;
+        padding-right: 0;
+        background: none;
+        margin: 0 1em;
+        a {
+          display: block;
+          padding: .25em 0; } } } } 
+  div#site-generator {
+    font-size: 70%; } }

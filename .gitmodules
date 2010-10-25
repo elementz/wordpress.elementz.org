@@ -1,0 +1,3 @@
+[submodule "htdocs/wordpress/wp-content/themes/wp-life"]
+	path = htdocs/wordpress/wp-content/themes/wp-life
+	url = http://github.com/imathis/wp-life.git
